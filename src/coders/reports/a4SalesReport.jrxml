@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="638b5930-cf16-42e2-bd7f-77b9a65d58e3">
+	<property name="ireport.zoom" value="1.7261356071965521"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="263"/>
+	<queryString>
+		<![CDATA[Select Sales.s_Item,Sales.s_Qty,Sales.s_Unit,Sales.s_CGSTAmt,Sales.s_SGSTAmt,Sales.s_IGSTAmt,Sales.s_Amount,Company.c_name,
+Company.c_address,Company.c_contact,Company.c_email,Company.c_gstin from Sales,Company;]]>
+	</queryString>
+	<field name="s_Item" class="java.lang.Object"/>
+	<field name="s_Qty" class="java.lang.Object"/>
+	<field name="s_Unit" class="java.lang.Object"/>
+	<field name="s_CGSTAmt" class="java.lang.Object"/>
+	<field name="s_SGSTAmt" class="java.lang.Object"/>
+	<field name="s_IGSTAmt" class="java.lang.Object"/>
+	<field name="s_Amount" class="java.lang.Object"/>
+	<field name="c_name" class="java.lang.Object"/>
+	<field name="c_address" class="java.lang.Object"/>
+	<field name="c_contact" class="java.lang.Object"/>
+	<field name="c_email" class="java.lang.Object"/>
+	<field name="c_gstin" class="java.lang.Object"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="171" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="3" width="555" height="24" uuid="bc42353a-533e-4bf1-a34d-104a3a72ba8c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{c_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="27" width="554" height="18" uuid="0ad9aa5e-d903-4cdf-825b-b5c342f5381c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{c_address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="45" width="555" height="16" uuid="f55aff7b-3af6-42a0-9963-3eb32a5a0562"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{c_contact}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="61" width="554" height="15" uuid="b4ee9e47-e234-4fa7-8f5d-d93c98cec070"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{c_email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="77" width="555" height="12" uuid="a9884982-e9cc-45ce-b194-3237811fbdc0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{c_gstin}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="65" splitType="Stretch">
+			<line>
+				<reportElement x="1" y="62" width="554" height="1" uuid="f9f2ee84-0ef9-488e-8057-3c48f602c331"/>
+			</line>
+			<staticText>
+				<reportElement x="1" y="0" width="554" height="27" uuid="a42155d2-6427-47db-9bf9-3b7589057930"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[SALES REPORT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="42" width="249" height="20" uuid="afc3a2d8-ef03-4d5c-a41f-3333baf60333"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ITEM DESCRIPTION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="270" y="42" width="50" height="20" uuid="86e8e95d-4599-4c63-ab6a-a82e0b55a478"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[QTY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="42" width="40" height="20" uuid="492301a8-b5bf-4699-b765-a36de9116992"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[UNIT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="42" width="44" height="20" uuid="5be404d2-b290-4707-a1b9-247c98b097ac"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CGST]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="404" y="42" width="46" height="20" uuid="0fceb179-bdcd-480b-84f2-82dfaf01e3e4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SGST]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="450" y="42" width="42" height="20" uuid="c0260db4-75f9-4846-9751-f87e8f77d512"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[IGST]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="492" y="42" width="63" height="20" uuid="95991f46-4dba-40ec-bfd2-13ad37a3c63e"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[AMOUNT]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="17" splitType="Stretch">
+			<textField>
+				<reportElement x="21" y="0" width="249" height="15" uuid="27cfa18d-b399-4562-a7b7-3f22f13a1d35"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[""+$F{s_Item}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="270" y="0" width="50" height="15" uuid="3f3aec5c-e5b9-4d43-bc3b-44a5f7c5b197"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[""+$F{s_Qty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="0" width="40" height="15" uuid="6613583f-df7b-4d29-95a5-eb81fd34c19e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[""+$F{s_Unit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="360" y="0" width="44" height="15" uuid="b10fd0dd-0b17-44d6-a4e7-a4982c0f986f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[""+$F{s_CGSTAmt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="404" y="0" width="46" height="15" uuid="ffba07d4-eb96-4e0c-93ba-7de86353fef0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[""+$F{s_SGSTAmt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="0" width="42" height="15" uuid="44428eec-48cb-4215-9d64-7346f43a7d56"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[""+$F{s_IGSTAmt}]]></textFieldExpression>
+			</textField>
+			<textField pattern="####.00" isBlankWhenNull="true">
+				<reportElement x="492" y="0" width="63" height="15" uuid="4f57fc1a-9b89-45ed-9bcd-4c2c885dbeb2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[""+new DecimalFormat("#0.00").format($F{s_Amount})]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
