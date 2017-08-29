@@ -860,7 +860,7 @@ public class ManageSales extends javax.swing.JFrame {
                 try{
                     String sql="Select * from Transactions,Sales,Company where Sales.s_InvoiceID='"+InvID+"' "
                             + "AND Transactions.t_invoiceID='"+InvID+"'";
-                    JasperDesign jd= JRXmlLoader.load("src/coders/reports/a4Invoice.jrxml");
+                    JasperDesign jd= JRXmlLoader.load("src/coders/reports/a4Invoice2.jrxml");
                     JRDesignQuery qry=new JRDesignQuery();
                     qry.setText(sql);
                     jd.setQuery(qry);
