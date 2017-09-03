@@ -2,16 +2,10 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" scriptletClass="com.reporter.jasper.ConvertToWord" uuid="a049e46f-336a-4269-952b-b8e42569f5a7">
 	<property name="ireport.zoom" value="1.3310000000000008"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="37"/>
+	<property name="ireport.y" value="0"/>
 	<queryString>
-		<![CDATA[Select * from Company,PurchaseInward,PurchaseTransactions;]]>
+		<![CDATA[Select * from PurchaseInward,PurchaseTransactions;]]>
 	</queryString>
-	<field name="compid" class="java.lang.Object"/>
-	<field name="c_name" class="java.lang.Object"/>
-	<field name="c_address" class="java.lang.Object"/>
-	<field name="c_contact" class="java.lang.Object"/>
-	<field name="c_email" class="java.lang.Object"/>
-	<field name="c_gstin" class="java.lang.Object"/>
 	<field name="piID" class="java.lang.Object"/>
 	<field name="piInvoiceID" class="java.lang.Object"/>
 	<field name="piDealerName" class="java.lang.Object"/>
@@ -64,92 +58,61 @@
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="187" splitType="Stretch">
-			<textField>
-				<reportElement x="1" y="4" width="552" height="25" uuid="e52e2adc-b03e-4c60-ae2b-1543f7f2a7dd"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="16" isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{c_name}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="1" y="29" width="552" height="12" uuid="5bc31ea3-021c-4c32-82b9-36a88a6de784"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font isBold="false"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{c_gstin}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="1" y="42" width="552" height="14" uuid="44cde3f0-a18f-421f-8b71-d79a030ec590"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font isBold="false"/>
-				</textElement>
-				<textFieldExpression><![CDATA[""+$F{c_address}]]></textFieldExpression>
-			</textField>
+		<band height="102" splitType="Stretch">
 			<staticText>
-				<reportElement x="183" y="93" width="196" height="20" forecolor="#000000" uuid="25cbc6ef-b1a0-4458-9f1a-9db27833189e"/>
+				<reportElement x="183" y="6" width="196" height="20" forecolor="#000000" uuid="25cbc6ef-b1a0-4458-9f1a-9db27833189e"/>
 				<textElement textAlignment="Center">
 					<font size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[PURCHASE INVOICE]]></text>
 			</staticText>
 			<line>
-				<reportElement x="0" y="113" width="555" height="1" uuid="55ca2b15-74fd-4e30-8052-ae903a49a58f"/>
+				<reportElement x="0" y="26" width="555" height="1" uuid="55ca2b15-74fd-4e30-8052-ae903a49a58f"/>
 				<graphicElement>
 					<pen lineWidth="3.0" lineStyle="Solid"/>
 				</graphicElement>
 			</line>
 			<textField>
-				<reportElement x="0" y="115" width="247" height="20" uuid="988130fe-5cd6-42ac-8311-5156c17fad1b"/>
+				<reportElement x="0" y="28" width="247" height="20" uuid="988130fe-5cd6-42ac-8311-5156c17fad1b"/>
 				<textElement verticalAlignment="Middle">
 					<font isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA["INVOICE ID: "+$F{ptInvoiceID}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="379" y="115" width="75" height="20" uuid="a254cf5c-3659-4a7a-be30-002d2cdb07d8"/>
+				<reportElement x="379" y="28" width="75" height="20" uuid="a254cf5c-3659-4a7a-be30-002d2cdb07d8"/>
 				<textElement verticalAlignment="Middle">
 					<font isBold="true"/>
 				</textElement>
 				<text><![CDATA[Invoice Date :]]></text>
 			</staticText>
 			<textField pattern="dd/MM/yyyy">
-				<reportElement x="454" y="115" width="100" height="20" uuid="80667841-998c-4a7d-b87f-ac2af54bfec0"/>
+				<reportElement x="454" y="28" width="100" height="20" uuid="80667841-998c-4a7d-b87f-ac2af54bfec0"/>
 				<textElement verticalAlignment="Middle">
 					<font isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="2" y="143" width="120" height="20" uuid="cebd34da-e0d7-4788-8c51-7b4675355faa"/>
+				<reportElement x="2" y="56" width="120" height="20" uuid="cebd34da-e0d7-4788-8c51-7b4675355faa"/>
 				<textElement>
 					<font size="14" isBold="true" isItalic="true" isUnderline="false"/>
 				</textElement>
 				<text><![CDATA[Dealer Details:]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="2" y="165" width="551" height="20" uuid="070d5bad-342b-418f-a6ae-b0ae23dca21b"/>
+				<reportElement x="2" y="78" width="551" height="20" uuid="070d5bad-342b-418f-a6ae-b0ae23dca21b"/>
 				<textElement verticalAlignment="Middle">
 					<font size="12" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[""+$F{piDealerName}]]></textFieldExpression>
 			</textField>
 			<line>
-				<reportElement x="0" y="136" width="555" height="1" uuid="e4c6cf23-1ac7-413e-9687-8fc119a4df08"/>
+				<reportElement x="0" y="49" width="555" height="1" uuid="e4c6cf23-1ac7-413e-9687-8fc119a4df08"/>
 			</line>
-			<textField>
-				<reportElement x="1" y="57" width="552" height="17" uuid="b7cccf16-76aa-4bc7-9c8c-9b764169a4e3"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA["Contact: "+$F{c_contact}]]></textFieldExpression>
-			</textField>
 			<line>
 				<reportElement x="0" y="1" width="555" height="1" uuid="2a7a87b5-b62d-4b8e-b6a3-bd990323c8e7"/>
 			</line>
-			<textField>
-				<reportElement x="2" y="74" width="551" height="13" uuid="7e0af8c2-7574-45b9-8762-6c45e9c982a2"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA["Email: "+$F{c_email}]]></textFieldExpression>
-			</textField>
 		</band>
 	</title>
 	<columnHeader>
