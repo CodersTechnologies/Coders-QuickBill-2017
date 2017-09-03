@@ -217,7 +217,7 @@ public class CreditBalanceReportJInternalFrame extends javax.swing.JInternalFram
     //Program to Print Sales Report
     public void printReport(){
         try{
-            String sql="Select * from Transactions where t_balance IS NOT NULL AND t_date BETWEEN '"+FromDT+"' and '"+ToDT+"'";
+            String sql="Select * from Company,Transactions where t_balance IS NOT NULL AND t_date BETWEEN '"+FromDT+"' and '"+ToDT+"'";
             JasperDesign jd= JRXmlLoader.load("src/coders/reports/a4CreditBalanceReport.jrxml");
             JRDesignQuery qry=new JRDesignQuery();
             qry.setText(sql);

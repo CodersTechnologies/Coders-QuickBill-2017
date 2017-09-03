@@ -232,7 +232,7 @@ public class Dashboard extends javax.swing.JFrame {
         lblDealersAccount.setForeground(java.awt.Color.white);
         lblDealersAccount.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblDealersAccount.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coders/images/dealer.png"))); // NOI18N
-        lblDealersAccount.setText("Dealer Account");
+        lblDealersAccount.setText("Dealers");
         lblDealersAccount.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         lblDealersAccount.setPreferredSize(new java.awt.Dimension(135, 150));
         lblDealersAccount.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -426,7 +426,7 @@ public class Dashboard extends javax.swing.JFrame {
         });
         jMenuBar1.add(mnuCustomers);
 
-        mnuDealerAccount.setText("Dealer Account");
+        mnuDealerAccount.setText("Dealers");
         mnuDealerAccount.setFont(new java.awt.Font("Ubuntu", 0, 13)); // NOI18N
         jMenuBar1.add(mnuDealerAccount);
 
