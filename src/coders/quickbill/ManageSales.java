@@ -16,6 +16,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import net.proteanit.sql.DbUtils;
 import net.sf.jasperreports.engine.JRException;
@@ -41,6 +42,7 @@ public class ManageSales extends javax.swing.JFrame {
      */
     public ManageSales() {
         initComponents();
+        this.setIconImage(new ImageIcon(getClass().getResource("QB_Icon-32x32.png")).getImage());
         conn=javaconnect.ConnectDB();
     }
     //Program to set one instance of Sales Form

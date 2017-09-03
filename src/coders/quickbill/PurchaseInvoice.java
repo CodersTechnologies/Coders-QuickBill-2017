@@ -14,6 +14,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import net.proteanit.sql.DbUtils;
@@ -42,6 +43,7 @@ public class PurchaseInvoice extends javax.swing.JFrame {
      */
     public PurchaseInvoice() {
         initComponents();
+        this.setIconImage(new ImageIcon(getClass().getResource("QB_Icon-32x32.png")).getImage());
         conn=javaconnect.ConnectDB();
     }
 

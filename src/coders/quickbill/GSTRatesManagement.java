@@ -7,6 +7,7 @@ package coders.quickbill;
 import java.awt.HeadlessException;
 import javax.swing.JOptionPane;
 import java.sql.*;
+import javax.swing.ImageIcon;
 import net.proteanit.sql.DbUtils;
 /**
  *
@@ -22,6 +23,7 @@ public class GSTRatesManagement extends javax.swing.JFrame {
      */
     public GSTRatesManagement() {
         initComponents();
+        this.setIconImage(new ImageIcon(getClass().getResource("QB_Icon-32x32.png")).getImage());
         conn=javaconnect.ConnectDB();
     }
 

@@ -6,6 +6,7 @@
 package coders.quickbill;
 import javax.swing.JOptionPane;
 import java.sql.*;
+import javax.swing.ImageIcon;
 /**
  *
  * @author sunny
@@ -20,6 +21,7 @@ public class ManageCompany extends javax.swing.JFrame {
      */
     public ManageCompany() {
         initComponents();
+        this.setIconImage(new ImageIcon(getClass().getResource("QB_Icon-32x32.png")).getImage());
         conn=javaconnect.ConnectDB();
     }
 

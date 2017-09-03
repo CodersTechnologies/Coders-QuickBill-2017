@@ -8,6 +8,7 @@ import java.awt.HeadlessException;
 import java.awt.event.KeyEvent;
 import javax.swing.JOptionPane;
 import java.sql.*;
+import javax.swing.ImageIcon;
 import net.proteanit.sql.DbUtils;
 /**
  *
@@ -23,6 +24,7 @@ public class ManageCustomer extends javax.swing.JFrame {
      */
     public ManageCustomer() {
         initComponents();
+        this.setIconImage(new ImageIcon(getClass().getResource("QB_Icon-32x32.png")).getImage());
         conn=javaconnect.ConnectDB();
     }
 

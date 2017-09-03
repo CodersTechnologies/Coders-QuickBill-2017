@@ -9,6 +9,7 @@ import java.awt.Color;
 import java.awt.HeadlessException;
 import java.awt.event.KeyEvent;
 import java.sql.*;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import net.proteanit.sql.DbUtils;
@@ -36,6 +37,7 @@ public class ManageProducts extends javax.swing.JFrame {
      */
     public ManageProducts() {
         initComponents();
+        this.setIconImage(new ImageIcon(getClass().getResource("QB_Icon-32x32.png")).getImage());
         conn=javaconnect.ConnectDB();
     }
 
