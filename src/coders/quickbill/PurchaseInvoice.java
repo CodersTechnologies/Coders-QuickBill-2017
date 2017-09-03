@@ -1719,7 +1719,7 @@ public class PurchaseInvoice extends javax.swing.JFrame {
             pst=conn.prepareStatement(sql);
             pst.setString(1, "%"+invNoVal+"%");
             rs=pst.executeQuery();
-            if(rs.next()){
+            while(rs.next()){
                 cmbDealer.setSelectedItem("piDealerName");
             }
             pst.close();
