@@ -1350,7 +1350,7 @@ public class PurchaseInvoice extends javax.swing.JFrame {
     }
     public void purInvoice(){
         try{
-            String sql="Select * from PurchaseTransactions,PurchaseInward where PurchaseInward.piInvoiceID='"+txtInvoiceNo.getText()+"' AND PurchaseTransactions.ptInvoiceID='"+txtInvoiceNo.getText()+"'";
+            String sql="Select * from Company,PurchaseTransactions,PurchaseInward where PurchaseInward.piInvoiceID='"+txtInvoiceNo.getText()+"' AND PurchaseTransactions.ptInvoiceID='"+txtInvoiceNo.getText()+"'";
                 JasperDesign jd= JRXmlLoader.load("src/coders/reports/a4PurchaseInvoice.jrxml");
                 JRDesignQuery qry=new JRDesignQuery();
                 qry.setText(sql);
@@ -1712,6 +1712,22 @@ public class PurchaseInvoice extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, e,"getPurInwardOnInvoiceNo() Exception",JOptionPane.ERROR_MESSAGE);
         }        
     }
+    public void getDealerFromPI(){
+        try{
+            String invNoVal=txtInvoiceNo.getText();
+            String sql="Select * from PurchaseInward where piInvoiceID LIKE ?";
+            pst=conn.prepareStatement(sql);
+            pst.setString(1, "%"+invNoVal+"%");
+            rs=pst.executeQuery();
+            if(rs.next()){
+                cmbDealer.setSelectedItem("piDealerName");
+            }
+            pst.close();
+        }
+        catch(SQLException e){
+            JOptionPane.showMessageDialog(null, e,"getPurInwardOnInvoiceNo() Exception",JOptionPane.ERROR_MESSAGE);
+        } 
+    }
     public void readPI(){
         try{
             String invNoVal=txtInvoiceNo.getText();
@@ -1751,6 +1767,7 @@ public class PurchaseInvoice extends javax.swing.JFrame {
     private void txtInvoiceNoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtInvoiceNoKeyReleased
         // TODO add your handling code here:
         getPurInwardOnInvoiceNoToTbl();
+        getDealerFromPI();
         calcGT();
         readPurTrans();
     }//GEN-LAST:event_txtInvoiceNoKeyReleased
