@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" scriptletClass="com.reporter.jasper.ConvertToWord" uuid="a049e46f-336a-4269-952b-b8e42569f5a7">
-	<property name="ireport.zoom" value="1.771561000000026"/>
-	<property name="ireport.x" value="70"/>
-	<property name="ireport.y" value="446"/>
+	<property name="ireport.zoom" value="3.1384283767210484"/>
+	<property name="ireport.x" value="453"/>
+	<property name="ireport.y" value="117"/>
 	<queryString>
 		<![CDATA[Select * from Transactions,Sales,Company;]]>
 	</queryString>
@@ -80,14 +80,14 @@
 				<textFieldExpression><![CDATA[""+$F{c_name}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="1" y="29" width="552" height="12" uuid="5bc31ea3-021c-4c32-82b9-36a88a6de784"/>
+				<reportElement x="1" y="29" width="552" height="14" uuid="5bc31ea3-021c-4c32-82b9-36a88a6de784"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA["GSTIN : "+$F{c_gstin}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="1" y="42" width="552" height="14" uuid="44cde3f0-a18f-421f-8b71-d79a030ec590"/>
+				<reportElement x="1" y="43" width="552" height="14" uuid="44cde3f0-a18f-421f-8b71-d79a030ec590"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font isBold="false"/>
 				</textElement>
