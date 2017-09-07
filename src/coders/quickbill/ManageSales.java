@@ -962,6 +962,9 @@ public class ManageSales extends javax.swing.JFrame {
         jScrollPane3 = new javax.swing.JScrollPane();
         tblBilllingList = new javax.swing.JTable();
         lblTime = new javax.swing.JLabel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        mnuManageCustomer = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Sales Manager - Coders QuickBill 2017");
@@ -1911,7 +1914,7 @@ public class ManageSales extends javax.swing.JFrame {
                     .addComponent(btnDelete)
                     .addComponent(btnReset))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 304, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 283, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1956,6 +1959,20 @@ public class ManageSales extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        jMenu1.setText("Customer");
+
+        mnuManageCustomer.setText("Manage Customers");
+        mnuManageCustomer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuManageCustomerActionPerformed(evt);
+            }
+        });
+        jMenu1.add(mnuManageCustomer);
+
+        jMenuBar1.add(jMenu1);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -2524,6 +2541,12 @@ public class ManageSales extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtQtyActionPerformed
 
+    private void mnuManageCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuManageCustomerActionPerformed
+        // TODO add your handling code here:
+        ManageCustomer mc=new ManageCustomer();
+        mc.setVisible(true);
+    }//GEN-LAST:event_mnuManageCustomerActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -2596,6 +2619,8 @@ public class ManageSales extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -2604,6 +2629,7 @@ public class ManageSales extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JLabel lblCurrentDate;
     private javax.swing.JLabel lblTime;
+    private javax.swing.JMenuItem mnuManageCustomer;
     private javax.swing.JTable tblBilllingList;
     private javax.swing.JTable tblCustomers;
     private javax.swing.JTable tblProducts;

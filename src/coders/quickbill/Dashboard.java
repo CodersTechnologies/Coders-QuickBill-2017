@@ -63,10 +63,13 @@ public class Dashboard extends javax.swing.JFrame {
         mnuManageCompanyDetails = new javax.swing.JMenuItem();
         mnuProducts = new javax.swing.JMenu();
         mnuDirectProductManagement = new javax.swing.JMenuItem();
+        jSeparator1 = new javax.swing.JPopupMenu.Separator();
         mnuPurchaseReturn = new javax.swing.JMenuItem();
+        jSeparator2 = new javax.swing.JPopupMenu.Separator();
         mnuPurchaseInward = new javax.swing.JMenuItem();
         mnuSales = new javax.swing.JMenu();
         mnuPosTerminal = new javax.swing.JMenuItem();
+        jSeparator3 = new javax.swing.JPopupMenu.Separator();
         mnuSalesReturn = new javax.swing.JMenuItem();
         mnuGST = new javax.swing.JMenu();
         mnuGSTRatesManagement = new javax.swing.JMenuItem();
@@ -75,6 +78,9 @@ public class Dashboard extends javax.swing.JFrame {
         mnuCustomers = new javax.swing.JMenu();
         mnuDealerAccount = new javax.swing.JMenu();
         mnuAbout = new javax.swing.JMenu();
+        mnuAboutQuickBill2017 = new javax.swing.JMenuItem();
+        jSeparator4 = new javax.swing.JPopupMenu.Separator();
+        mnuDeveloperInfo = new javax.swing.JMenuItem();
         mnuClose = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -287,8 +293,8 @@ public class Dashboard extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        lblLicenseDetails.setFont(new java.awt.Font("Ubuntu", 1, 12)); // NOI18N
-        lblLicenseDetails.setForeground(java.awt.Color.blue);
+        lblLicenseDetails.setFont(new java.awt.Font("Ubuntu", 0, 14)); // NOI18N
+        lblLicenseDetails.setForeground(java.awt.Color.white);
         lblLicenseDetails.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -347,6 +353,7 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
         mnuProducts.add(mnuDirectProductManagement);
+        mnuProducts.add(jSeparator1);
 
         mnuPurchaseReturn.setText("Purchase Return");
         mnuPurchaseReturn.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -355,6 +362,7 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
         mnuProducts.add(mnuPurchaseReturn);
+        mnuProducts.add(jSeparator2);
 
         mnuPurchaseInward.setText("Purchase Invoice");
         mnuPurchaseInward.addActionListener(new java.awt.event.ActionListener() {
@@ -381,6 +389,7 @@ public class Dashboard extends javax.swing.JFrame {
             }
         });
         mnuSales.add(mnuPosTerminal);
+        mnuSales.add(jSeparator3);
 
         mnuSalesReturn.setText("Sales Return");
         mnuSalesReturn.addActionListener(new java.awt.event.ActionListener() {
@@ -432,6 +441,24 @@ public class Dashboard extends javax.swing.JFrame {
 
         mnuAbout.setText("About");
         mnuAbout.setFont(new java.awt.Font("Ubuntu", 0, 13)); // NOI18N
+
+        mnuAboutQuickBill2017.setText("Coders Quickbill 2017");
+        mnuAboutQuickBill2017.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuAboutQuickBill2017ActionPerformed(evt);
+            }
+        });
+        mnuAbout.add(mnuAboutQuickBill2017);
+        mnuAbout.add(jSeparator4);
+
+        mnuDeveloperInfo.setText("Developer Info");
+        mnuDeveloperInfo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuDeveloperInfoActionPerformed(evt);
+            }
+        });
+        mnuAbout.add(mnuDeveloperInfo);
+
         jMenuBar1.add(mnuAbout);
 
         mnuClose.setText("Close");
@@ -667,6 +694,18 @@ public class Dashboard extends javax.swing.JFrame {
         ManageDealer.getObj().setVisible(true);
     }//GEN-LAST:event_lblDealersAccountMouseClicked
 
+    private void mnuDeveloperInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuDeveloperInfoActionPerformed
+        // TODO add your handling code here:
+        DeveloperInfo di=new DeveloperInfo();
+        di.setVisible(true);
+    }//GEN-LAST:event_mnuDeveloperInfoActionPerformed
+
+    private void mnuAboutQuickBill2017ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuAboutQuickBill2017ActionPerformed
+        // TODO add your handling code here:
+        AboutQuickbill aqb=new AboutQuickbill();
+        aqb.setVisible(true);
+    }//GEN-LAST:event_mnuAboutQuickBill2017ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -712,6 +751,10 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPopupMenu.Separator jSeparator1;
+    private javax.swing.JPopupMenu.Separator jSeparator2;
+    private javax.swing.JPopupMenu.Separator jSeparator3;
+    private javax.swing.JPopupMenu.Separator jSeparator4;
     private javax.swing.JLabel lblAbout;
     private javax.swing.JLabel lblCustomers;
     private javax.swing.JLabel lblDealersAccount;
@@ -723,10 +766,12 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel lblSalesAccount;
     private javax.swing.JLabel lblUser;
     private javax.swing.JMenu mnuAbout;
+    private javax.swing.JMenuItem mnuAboutQuickBill2017;
     private javax.swing.JMenu mnuClose;
     private javax.swing.JMenu mnuCompany;
     private javax.swing.JMenu mnuCustomers;
     private javax.swing.JMenu mnuDealerAccount;
+    private javax.swing.JMenuItem mnuDeveloperInfo;
     private javax.swing.JMenuItem mnuDirectProductManagement;
     private javax.swing.JMenu mnuGST;
     private javax.swing.JMenuItem mnuGSTRatesManagement;
