@@ -835,7 +835,7 @@ public class ManageSales extends javax.swing.JFrame {
     public void printOptions(){
         try{
             String CustID=txtCustomerID.getText(),InvID=txtBillNo.getText();
-            String[] choice={"3-Inch Invoice","A4-Full Invoice"};
+            String[] choice={"CGST+SSGT Invoice","IGST Invoice"};
             //Integer[] options = {1, 3, 5, 7, 9, 11};
             //Double[] options = {3.141, 1.618};
             //Character[] options = {'a', 'b', 'c', 'd'};
@@ -847,7 +847,7 @@ public class ManageSales extends javax.swing.JFrame {
                 try{
                     String sql="Select * from Transactions,Sales,Company where Sales.s_InvoiceID='"+InvID+"' "
                             + "AND Transactions.t_invoiceID='"+InvID+"'";
-                    JasperDesign jd= JRXmlLoader.load("src/coders/reports/3inchInvoice.jrxml");
+                    JasperDesign jd= JRXmlLoader.load("src/coders/reports/a4Invoice2.jrxml");
                     JRDesignQuery qry=new JRDesignQuery();
                     qry.setText(sql);
                     jd.setQuery(qry);
@@ -862,7 +862,7 @@ public class ManageSales extends javax.swing.JFrame {
                 try{
                     String sql="Select * from Transactions,Sales,Company where Sales.s_InvoiceID='"+InvID+"' "
                             + "AND Transactions.t_invoiceID='"+InvID+"'";
-                    JasperDesign jd= JRXmlLoader.load("src/coders/reports/a4Invoice2.jrxml");
+                    JasperDesign jd= JRXmlLoader.load("src/coders/reports/a4Invoice3.jrxml");
                     JRDesignQuery qry=new JRDesignQuery();
                     qry.setText(sql);
                     jd.setQuery(qry);
