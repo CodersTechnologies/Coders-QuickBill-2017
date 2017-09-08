@@ -845,7 +845,7 @@ public class ManageSales extends javax.swing.JFrame {
             //JOptionPane.showMessageDialog(null, "You Selected: "+x);            
             if(x == 0){
                 try{
-                    String sql="Select * from Transactions,Sales,Company where Sales.s_InvoiceID='"+InvID+"' "
+                    String sql="Select * from Transactions,Sales,Company,termsConditions where Sales.s_InvoiceID='"+InvID+"' "
                             + "AND Transactions.t_invoiceID='"+InvID+"'";
                     JasperDesign jd= JRXmlLoader.load("src/coders/reports/a4Invoice2.jrxml");
                     JRDesignQuery qry=new JRDesignQuery();
@@ -860,7 +860,7 @@ public class ManageSales extends javax.swing.JFrame {
             }
             else{
                 try{
-                    String sql="Select * from Transactions,Sales,Company where Sales.s_InvoiceID='"+InvID+"' "
+                    String sql="Select * from Transactions,Sales,Company,termsConditions where Sales.s_InvoiceID='"+InvID+"' "
                             + "AND Transactions.t_invoiceID='"+InvID+"'";
                     JasperDesign jd= JRXmlLoader.load("src/coders/reports/a4Invoice3.jrxml");
                     JRDesignQuery qry=new JRDesignQuery();
