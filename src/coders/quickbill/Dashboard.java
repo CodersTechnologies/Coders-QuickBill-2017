@@ -77,6 +77,7 @@ public class Dashboard extends javax.swing.JFrame {
         mnuSalesAccount = new javax.swing.JMenu();
         mnuCustomers = new javax.swing.JMenu();
         mnuDealerAccount = new javax.swing.JMenu();
+        jMenu1 = new javax.swing.JMenu();
         mnuAbout = new javax.swing.JMenu();
         mnuAboutQuickBill2017 = new javax.swing.JMenuItem();
         jSeparator4 = new javax.swing.JPopupMenu.Separator();
@@ -437,7 +438,20 @@ public class Dashboard extends javax.swing.JFrame {
 
         mnuDealerAccount.setText("Dealers");
         mnuDealerAccount.setFont(new java.awt.Font("Ubuntu", 0, 13)); // NOI18N
+        mnuDealerAccount.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                mnuDealerAccountMouseClicked(evt);
+            }
+        });
         jMenuBar1.add(mnuDealerAccount);
+
+        jMenu1.setText("T&C");
+        jMenu1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu1MouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(jMenu1);
 
         mnuAbout.setText("About");
         mnuAbout.setFont(new java.awt.Font("Ubuntu", 0, 13)); // NOI18N
@@ -706,6 +720,18 @@ public class Dashboard extends javax.swing.JFrame {
         aqb.setVisible(true);
     }//GEN-LAST:event_mnuAboutQuickBill2017ActionPerformed
 
+    private void mnuDealerAccountMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mnuDealerAccountMouseClicked
+        // TODO add your handling code here:
+        ManageDealer md=new ManageDealer();
+        md.setVisible(true);
+    }//GEN-LAST:event_mnuDealerAccountMouseClicked
+
+    private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
+        // TODO add your handling code here:
+        TermsAndConditions tc=new TermsAndConditions();
+        tc.setVisible(true);
+    }//GEN-LAST:event_jMenu1MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -748,6 +774,7 @@ public class Dashboard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

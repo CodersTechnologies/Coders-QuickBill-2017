@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" scriptletClass="com.reporter.jasper.ConvertToWord" uuid="a049e46f-336a-4269-952b-b8e42569f5a7">
-	<property name="ireport.zoom" value="2.5937424601000414"/>
-	<property name="ireport.x" value="509"/>
-	<property name="ireport.y" value="816"/>
+	<property name="ireport.zoom" value="1.3310000000000208"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="295"/>
 	<queryString>
-		<![CDATA[Select * from Transactions,Sales,Company;]]>
+		<![CDATA[Select * from Transactions,Sales,Company,termsConditions;]]>
 	</queryString>
 	<field name="tid" class="java.lang.Object"/>
 	<field name="t_date" class="java.lang.Object"/>
@@ -49,6 +49,8 @@
 	<field name="c_contact" class="java.lang.Object"/>
 	<field name="c_email" class="java.lang.Object"/>
 	<field name="c_gstin" class="java.lang.Object"/>
+	<field name="tcID" class="java.lang.Object"/>
+	<field name="tcDescription" class="java.lang.Object"/>
 	<variable name="total" class="java.lang.Double" calculation="Sum">
 		<variableExpression><![CDATA[$F{s_Total}]]></variableExpression>
 	</variable>
@@ -511,6 +513,15 @@
 					<font size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{gt}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="125" width="221" height="20" uuid="f7d31433-61b0-44ce-bb12-861be5d2bfb9"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Terms and Condition:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="2" y="145" width="551" height="91" uuid="7d6fe744-d78b-47c2-8245-8e58cbe46062"/>
+				<textFieldExpression><![CDATA[""+$F{tcDescription}]]></textFieldExpression>
 			</textField>
 		</band>
 	</summary>
