@@ -11,6 +11,7 @@ package coders.quickbill;
  */
 import java.sql.*;
 import javax.swing.*;
+
 public class javaconnect {
     
     Connection conn=null;
