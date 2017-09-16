@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" scriptletClass="com.reporter.jasper.ConvertToWord" uuid="a049e46f-336a-4269-952b-b8e42569f5a7">
 	<property name="ireport.zoom" value="1.3310000000000208"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="295"/>
+	<property name="ireport.y" value="264"/>
 	<queryString>
 		<![CDATA[Select * from Transactions,Sales,Company,termsConditions;]]>
 	</queryString>
@@ -498,7 +498,7 @@
 				<textElement verticalAlignment="Middle">
 					<font size="8" isBold="false"/>
 				</textElement>
-				<text><![CDATA[Amount of Tax subject to Reverse Charges :]]></text>
+				<text><![CDATA[Amount of Tax:]]></text>
 			</staticText>
 			<textField isBlankWhenNull="true">
 				<reportElement x="441" y="94" width="112" height="20" uuid="fd9f0bb3-7958-4857-a729-7bbbc35800e3"/>
